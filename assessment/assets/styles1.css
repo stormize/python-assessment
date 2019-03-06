@@ -1,0 +1,44 @@
+body{
+    background-color:#342224;
+    font-family:railway;
+    font-size:60px;  
+  }
+  #myquote{
+    color:#342224;
+  }
+  .blockquote{
+    margin-top:20px;
+  }
+  #main{
+    border:1px solid black;
+    margin-left:auto;
+    margin-right:auto;
+    margin-top:50px;
+    margin-bottom:auto;
+    height: 50%;
+    width: 50%;
+    background-color:white;
+    color:#342224;
+    border-radius:5%;
+  }
+  a,a:hover{
+    color:white;
+    border:solid #342224 1px;
+    background-color:#342224;
+    font-size:30px;
+    border-radius:10%;
+  }
+  button{
+    background-color:#342224;
+    cursor:pointer;
+    color:white;
+    border-radius:10%;
+    
+  }
+  .row{
+    height:50px;
+    margin-left:5px;
+    outline:none;
+    border:none;
+  }
+  

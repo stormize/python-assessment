@@ -1,0 +1,55 @@
+{% load static from staticfiles %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://use.fontawesome.com/c224fea3e7.js"></script>
+    <script src="{%static 'script.js'%}"></script>
+    <link rel="stylesheet" href="{% static 'styles1.css'%}">
+</head>
+<body>
+        
+        <div class="container-fluid">
+            <nav>  <ul>
+                {% if user.is_authenticated%}
+                <li>
+                <form class="logout-link" action="{% url 'signOut' %}" method="POST">
+                     {%csrf_token%}
+                    <button type="submit">logout</button>
+                </form>
+            </li>
+            {%else%}
+            <li><a href="{% url 'signIn' %}">Sign in</a></li>
+            <li><a href="{% url 'signUp' %}">Sign up</a></li>
+            {%endif%}
+            </ul>
+            <div class="wrapper">
+                {%block content%}
+                {%endblock%}
+            </div>
+            </nav>
+        <div id="main" class="col-md-6">
+          <div id="quote">
+        <blockquote class="blockquote">
+            <i class="fa fa-quote-left"></i><p id="myquote"></p>{{content}}</p>
+            <footer class="blockquote-footer">{{title}}</footer>
+          </blockquote>
+          </div>
+         
+          <button class="btn ">new quote</button>
+           <div class= "row">
+          
+         
+          <a href="https://www.twitter.com/" class=" col-md-1" target="_blank"><i class="fa fa-twitter " ></i></a>
+          <a href="https://www.facebook.com/" class="col-md-1" target="_blank"><i class="fa fa-facebook" ></i></a>
+             
+          </div>
+          
+        </div>
+        </div>
+</body>
+</html>

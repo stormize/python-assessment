@@ -1,0 +1,122 @@
+body{
+    margin: 0;
+  padding: 0;
+  font-family: sans-serif;
+  background:linear-gradient(to right, #ec2F4B, #009FFF);;
+}
+
+h1, h2, h3, h4, h5{
+    font-weight: normal;
+    margin: 0;
+}
+
+a, a:hover, a:visited{
+    color: #fff;
+    text-decoration: none;
+}
+
+.wrapper{
+    max-width: 960px;
+    margin: 0 auto;
+}
+
+div.wrapper > h1{
+    text-align: center;
+    margin: 100px auto;
+    font-size: 2.4em
+}
+
+header{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    padding: 20px 0;
+}
+
+
+
+a.highlight{
+    border: 1px solid #00dba0;
+    padding: 10px;
+    border-radius: 4px;
+    color: #00dba0;
+}
+
+.helptext, .helptext ul{
+    margin: 0 auto 20px;
+    color: #bbb;
+    font-size: 14px;
+    display: block;
+}
+
+.errorlist li{
+    padding: 10px;
+    list-style-type: none;
+    border: 1px solid #FF5722;
+    margin: 10px 0;
+    color: #FF5722
+}
+
+.errorlist{
+    padding: 0;
+    z-index: 1000;
+}
+.box-signup {
+  width: 450px;
+  padding: 30px;
+  top: 90%;
+  position:absolute;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: #34495e;
+  text-align: center;
+  box-shadow: 15px 15px #2c3e50;
+}
+.box {
+  width: 450px;
+  padding: 30px;
+  top: 50%;
+  position:absolute;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: #34495e;
+  text-align: center;
+  box-shadow: 15px 15px #2c3e50;
+}
+ input[type="text"], input[type="password"],input {
+    border: 0;
+    background: none;
+    display: block;
+    margin: 25px auto;
+    text-align: center;
+    border: 2px solid #3498db;
+    padding: 12px 10px;
+    width: 250px;
+    outline: none;
+    color: white;
+    border-radius: 25px;
+    transition: 0.25s;
+  }
+    input:focus {
+      width: 370px;
+      border-color: #1abc9c;
+    }
+  
+  
+  input[type="submit"] {
+    border: 0;
+    background: none;
+    display: block;
+    margin: 25px auto;
+    text-align: center;
+    border: 2px solid #1abc9c;
+    padding: 12px 10px;
+    width: 100px;
+    outline: none;
+    color: white;
+    border-radius: 25px;
+    transition: 0.25s;
+    cursor: pointer;}
+    input:hover {
+      background-color: #1abc9c;
+    }
+  

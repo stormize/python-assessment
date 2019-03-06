@@ -1,0 +1,28 @@
+{% load static from staticfiles %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Document</title>
+    <link rel="stylesheet" href="{% static 'styles.css'%}" >
+</head>
+<body>
+      <nav>  <ul>
+            {% if user.is_authenticated%}
+            <li>
+            <form class="logout-link" action="{% url 'signOut' %}" method="POST">
+                 {%csrf_token%}
+                <button type="submit">logout</button>
+            </form>
+        </li>
+        {%else%}
+        <li><a href="{% url 'signIn' %}">Sign in</a></li>
+        <li><a href="{% url 'signUp' %}">Sign up</a></li>
+        {%endif%}
+        </ul>
+        <div class="wrapper">
+            {%block content%}
+            {%endblock%}
+        </div>
+        </nav>
+</body>
+</html>

@@ -1,0 +1,12 @@
+{%extends 'base.html'%}
+{%block content%}
+<div class="wrapper">
+<h1>welcome</h1>
+<nav>
+    <ul>
+<li><a href="{% url 'myapp:app'%}">go to app</a></li>
+<li>><a href="{% url 'myapp:profile'%}">go to profile</a></li>
+</ul>
+<nav>
+</div>
+{%endblock%}
